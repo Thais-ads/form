@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div>
+
+            <div>
+                <h2 id="titulo">AAAAAAAAAAAAAAAAAAAAAAA</h2>
+            </div>
+            <form action>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+                <label for="password">senha</label>
+                <input type="password" name="password" id="password" required>
+                <button type="button" onclick="escuta()">enviar</button>
+            </form>
+        </div>
+
+        <script>
+      function escuta(){
+        var titulo = document.getElementById("titulo")
+        var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+            
+
+            if(password === "" ){
+                
+                alert("A SENHA é obrigatorio")
+
+            }
+
+
+
+            titulo.innerHTML=email
+
+         localStorage.setItem(email,password)
+         console.log(email)
+         console.log(password)
+      }
+            
+
+    </script>
+
+    </body>
+</html>
